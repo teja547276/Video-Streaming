@@ -1,0 +1,179 @@
+.user-videos-container {
+    padding: 20px;
+    max-width: 1200px;
+margin-top: 20px;
+}
+
+.user-videos-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.video-card {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+.thumbnail-container {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.video-thumbnail {
+    width: 100%;
+    border-radius: 8px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.video-info {
+    padding: 0 5px;
+}
+
+.video-title {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.video-stats {
+    font-size: 14px;
+    color: #606060;
+    margin: 0;
+}
+
+.no-videos {
+    text-align: center;
+    padding: 40px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.no-videos p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.upload-btn {
+    background: #065fd4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.upload-btn:hover {
+    background: #0544a8;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .videos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+/* ===== Add these new styles at the BOTTOM of UserVideos.css ===== */
+
+/* Black background for entire page */
+body.user-videos-page {
+  background-color: #000 !important;
+}
+
+/* Main container styling */
+.user-videos-container {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Text colors */
+.user-videos-container h2,
+.video-title,
+.video-stats,
+.no-videos p {
+  color: #fff !important;
+}
+
+/* Video card styling */
+.video-card {
+  background-color: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Thumbnail styling */
+.thumbnail-container {
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+/* No videos section */
+.no-videos {
+  background-color: #111 !important;
+  border: 1px solid #333;
+}
+
+.upload-btn {
+  background: #ff0000 !important;
+  color: white !important;
+}
+
+.upload-btn:hover {
+  background: #cc0000 !important;
+}
+
+/* Loading text */
+.loading {
+  color: #fff !important;
+}
+
+/* Grid alignment improvements */
+.videos-grid {
+  padding: 10px;
+}
+
+/* Duration badge */
+.video-duration {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+}

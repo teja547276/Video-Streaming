@@ -1,0 +1,565 @@
+.video{
+margin-top: 55px;
+display: flex;
+padding: 30px 0;
+justify-content: center;
+background-color: black;
+color: white;
+}
+.video-post-section{
+    width: 100%;
+    max-width: 875px;
+    display: flex;
+    flex-direction: column;
+
+}
+.video-youtube{
+    width: 100%;
+
+}
+.video-youtube-video{
+    width: 100%;
+    border-radius: 10px;
+
+}
+.video-youtube-about{
+    display: flex;
+    flex-direction: column;
+
+}
+.video-youtube-title{
+    font-size: 20px;
+    font-weight: 700;
+
+}
+.youtube-profile-block{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.youtube-profile-block-left{
+    display: flex;
+    gap: 15px;
+
+}
+.youtube-profile-block-left-imag{
+    width: 35px;
+    height: 35px;
+
+    cursor:pointer;
+}
+.youtube-profile-block-left-image{
+    width: 100%;
+    height: 100%;
+    border-radius:50% ;
+}
+
+
+
+.youtube-video-subview{
+    display: flex;
+    flex-direction: column;
+
+}
+.youtube-post-profile-name{
+    font-weight: 500;
+    font-size: 16px;
+
+}
+.youtube-post-profile-subs{
+    font-size: 14px;
+    color: #AAAAAA;
+}
+.subscribe-youtube{
+   background-color: white;
+
+    color: black;
+    padding: 0px 16px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+}
+.youtube-video-like-block{
+    display: flex;
+    gap: 10px;
+    background-color: #a5a5a538;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border-radius: 18px;
+    cursor: pointer;
+}
+.youtube-video-like-block-like{
+    display: flex;
+    gap: 10px;
+
+}
+.youtube-video-like-block-likes{
+    font-weight: 500;
+
+}
+.youtube-video-divider{
+    width: 100%;
+    height: 20px;
+    border: 1px solid;
+}
+.youtube-video-about{
+    display: flex; 
+    flex-direction: column;
+    padding: 10px;
+    background-color: #a5a5a538;
+    width: 100%;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    gap: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+
+
+
+}
+.youtube-comment-section{
+    font-size: 20px;
+    font-weight: 500;
+
+}
+.youtube-self-comment{
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+.video-youtube-self-comment-profile{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+
+}
+.add-comment{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.add-comment-input{
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 35px;
+    border: none;
+    font-size: 16px;
+    border-bottom: 1px solid grey;
+    &:focus{
+        outline: none;
+    }
+    &::placeholder{
+        font-size: 16px;
+
+    }
+} 
+.cancel-submit-comment{
+    display: flex;
+    gap:15px;
+    justify-content: flex-end;
+    margin-top: 10px;
+
+
+}
+.cancel-comment{
+    padding: 8px 16px;
+    border: 1px solid;
+    border-radius: 18px;
+    
+    cursor: pointer;
+    &:hover{
+        background-color: white;
+        color: black;
+
+    }
+}
+.youtube-other-comments{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.others-comment-section{
+    display: flex;
+    flex-direction:column;
+}
+.other-comment-section-header{
+    display: flex;
+    gap: 10px;
+
+}
+.channel-name-comment{
+    font-size: 14px;
+    font-weight: 500;
+    
+}
+.comment-timing-others{
+    font-size: 14px;
+    color: #AAAAAA;
+}
+.other-comment-section-comment{
+    font-size: 16px;
+    margin-top: 10px;
+
+
+}
+
+/* video-mobile.css */
+
+/* Apply styles for screens smaller than 768px (mobile devices) */
+@media only screen and (max-width: 768px) {
+  /* Main container: Full width, centered */
+  .video {
+    margin-top: 48px; /* Below navbar (from mobile.css) */
+    padding: 15px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  /* Video post section: Compact, centered */
+  .video-post-section {
+    width: 100%;
+    max-width: 400px; /* Reduced from 875px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Video player: Full width, compact height */
+  .video-youtube {
+    width: 100%;
+  }
+
+  .video-youtube-video {
+    width: 100%;
+    max-height: 200px; /* Compact for mobile */
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  /* About section: Compact */
+  .video-youtube-about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Video title: Smaller font */
+  .video-youtube-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  /* Profile block: Stack or compact */
+  .youtube-profile-block {
+    display: flex;
+    flex-direction: column; /* Stack for small screens */
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .youtube-profile-block-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .youtube-profile-block-left-imag {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .youtube-profile-block-left-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .youtube-video-subview {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .youtube-post-profile-name {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .youtube-post-profile-subs {
+    font-size: 12px;
+    color: #aaa;
+  }
+
+  .subscribe-youtube {
+    background-color: #fff;
+    color: #000;
+    padding: 0 12px;
+    border-radius: 16px;
+    height: 32px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  /* Like/dislike block: Compact */
+  .youtube-video-like-block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(165, 165, 165, 0.2);
+    padding: 6px 8px;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+
+  .youtube-video-like-block-like {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .youtube-video-like-block-likes {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .youtube-video-divider {
+    width: 1px;
+    height: 20px;
+    border: none;
+    background-color: #555;
+  }
+
+  /* Video about: Compact */
+  .youtube-video-about {
+    padding: 10px;
+    background-color: rgba(165, 165, 165, 0.2);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  /* Comment section: Compact */
+  .youtube-comment-section {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .youtube-comment-section-title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .youtube-self-comment {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .video-youtube-self-comment-profile {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+  }
+
+  .add-comment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .add-comment-input {
+    width: 100%;
+    height: 30px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #555;
+    font-size: 14px;
+  }
+
+  .add-comment-input:focus {
+    outline: none;
+  }
+
+  .add-comment-input::placeholder {
+    font-size: 14px;
+    color: #aaa;
+  }
+
+  .cancel-submit-comment {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+
+  .cancel-comment {
+    padding: 6px 12px;
+    border: 1px solid #555;
+    border-radius: 16px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .cancel-comment:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  /* Other comments: Compact */
+  .youtube-other-comments {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .others-comment-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .other-comment-section-header {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .channel-name-comment {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .comment-timing-others {
+    font-size: 12px;
+    color: #aaa;
+  }
+
+  .other-comment-section-comment {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  /* Toast container: Adjust for mobile */
+  .Toastify__toast-container {
+    width: 90%;
+    max-width: 320px;
+    font-size: 13px;
+  }
+
+  /* Fade homepage when sidebar is open (consistent with homepage) */
+  .home-page:not(.full-home-page) .video {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}
+
+/* Additional media query for wider mobile screens (500–768px) */
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+  .video-post-section {
+    max-width: 500px;
+  }
+
+  .video-youtube-video {
+    max-height: 240px;
+  }
+
+  .video-youtube-title {
+    font-size: 18px;
+  }
+
+  .youtube-profile-block {
+    flex-direction: row; /* Horizontal for wider screens */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .youtube-profile-block-left-imag {
+    width: 32px;
+    height: 32px;
+  }
+
+  .youtube-post-profile-name {
+    font-size: 15px;
+  }
+
+  .youtube-post-profile-subs {
+    font-size: 13px;
+  }
+
+  .subscribe-youtube {
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .youtube-video-like-block {
+    padding: 8px 10px;
+  }
+
+  .youtube-video-like-block-likes {
+    font-size: 14px;
+  }
+
+  .youtube-video-about {
+    font-size: 14px;
+  }
+
+  .youtube-comment-section-title {
+    font-size: 18px;
+  }
+
+  .video-youtube-self-comment-profile {
+    width: 30px;
+    height: 30px;
+  }
+
+  .add-comment-input {
+    height: 32px;
+    font-size: 15px;
+  }
+
+  .add-comment-input::placeholder {
+    font-size: 15px;
+  }
+
+  .cancel-comment {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .channel-name-comment {
+    font-size: 14px;
+  }
+
+  .comment-timing-others {
+    font-size: 13px;
+  }
+
+  .other-comment-section-comment {
+    font-size: 15px;
+  }
+}

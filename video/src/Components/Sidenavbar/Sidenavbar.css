@@ -1,0 +1,136 @@
+.home-side-navbar-hide {
+    display: none;
+}
+
+.home-side-navbar {
+    display: flex;
+    flex-direction: column;
+    flex: 0.16 1;
+    box-sizing: border-box;
+    height: 92vh;
+    overflow-y: auto;
+    position: fixed;
+    top: 55px;
+    left: 0px;
+    padding: 14px;
+    width: 275px;
+    background-color: black;
+    color: white;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+/* Add this new media query for mid-range screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .home-side-navbar {
+        width: 240px; /* Slightly narrower for mid-sized screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .home-side-navbar {
+        margin-top: 49px;
+        height: 100vh;
+        top: 0;
+        padding-top: 70px;
+        width: 50%;
+    }
+}
+
+.home-side-navbar::-webkit-scrollbar {
+    width: 12px;
+}
+
+.home-side-navbar::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+.home-side-navbar::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+.home-side-navbar::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.home-side-navbar-top {
+    display: flex;
+    flex-direction: row;
+    border-radius: 1px solid rgb(85, 85, 85);
+    padding-bottom: 10px;
+}
+/* Remove all link styling and set color for the container */
+.home-side-navbar-top-option a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adjust spacing between icon and text */
+}
+
+/* Specifically target the Material-UI icon */
+.home-side-navbar-top-option a svg {
+  color: inherit;
+  fill: currentColor;
+}
+
+/* If you want white color specifically */
+.home-side-navbar-top-option a,
+.home-side-navbar-top-option a svg {
+  color: white;
+  fill: white;
+}
+
+/* Hover effects (optional) */
+.home-side-navbar-top-option a:hover {
+  opacity: 0.8;
+}
+.home-side-navbar-top-option {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 9px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.home-side-navbar-top-option {
+  color: inherit; /* Inherits text color from parent */
+  text-decoration: none; /* Removes underline */
+}
+
+.home-side-navbar-top-option-title {
+  color: inherit; /* Inherits text color from parent */
+}
+
+
+.home-side-navbar-top-option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.home-side-navbar-top-option-title {
+    font-size: 14px;
+    font-weight: 450;
+}
+
+.home-sidenavbar-middle {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(86, 85, 85);
+    padding: 10px 0px;
+}
+
+.home-side-navbar-top-option-title-header {
+    font-weight: 600;
+}
+
+.home-sidenavbar-image-logo {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+
+

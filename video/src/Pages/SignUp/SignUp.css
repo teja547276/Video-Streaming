@@ -1,0 +1,403 @@
+.sign-up{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    animation: fadeIn 0.3s ease-out;
+}
+.sign-up-card{
+    width:40% ;
+    color: black;
+    border: 1px solid;
+    margin-top: 65px;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.5px 0.5px 8px white;
+    background-color: #222;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.sign-up-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 2px 12px white;
+}
+.sign-up-title{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: white;
+
+    font-size: 32px;
+    font-family: "Oswald",sans-serif;
+   
+}
+.sign-up-inpts{
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+
+
+}
+.sign-up-inpts-channel{
+    width: 60%;
+    height: 45px;
+    color: white;
+    padding: 0px 10px ;
+    border: none;
+    
+    border-radius: 8px;
+    background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
+    transition: all 0.3s ease-in-out;
+}
+.sign-up-inpts-channel:focus {
+    outline: none;
+    border-color: #ff0000;
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+}
+.image-upload-sign-up{
+    display: flex;
+    gap: 30px;
+
+}
+.image-upload-div{
+    width: 100%;
+    height: 100px;
+    
+    
+}
+.image-default-sign-up{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: transform 0.3s ease-in-out;
+}
+.image-default-sign-up:hover {
+    transform: scale(1.1);
+}
+.sign-up-buttons{
+    color: white;
+    display: flex;
+    flex-direction: flex-end;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    margin-left: 0px;
+
+}
+.sign-up-btn{
+    width: 9%;
+    height: 25px;
+    padding: 12px 12px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    border: 1px solid white ;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+/* Add these new styles below your existing .sign-up-buttons and .sign-up-btn classes */
+
+/* Container enhancement */
+.sign-up-buttons {
+    position: relative;
+    padding: 20px 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.1) 50%, rgba(0,0,0,0) 100%);
+}
+
+/* Button hover effects */
+.sign-up-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px; /* Better for responsive */
+}
+
+.sign-up-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.sign-up-btn:hover::before {
+    left: 100%;
+}
+
+/* Text decoration */
+.sign-up-btn span {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    padding: 0 5px;
+}
+
+.sign-up-btn:hover span {
+    transform: translateY(-2px);
+    text-shadow: 0 0 8px rgba(255,255,255,0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sign-up-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .sign-up-btn {
+        width: 60%;
+        height: auto;
+        padding: 12px 0;
+    }
+}
+.sign-up-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sign-up {
+    animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sign-up-btn {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+
+
+
+/* signup-mobile.css */
+
+/* Apply styles for screens smaller than 768px (mobile devices) */
+@media only screen and (max-width: 768px) {
+  /* Main container: Full width, strict centering */
+  .sign-up {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* Strict horizontal centering */
+    align-items: center; /* Strict vertical centering */
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #000;
+    overflow-x: hidden;
+    flex-direction: column;
+  }
+
+  /* Signup card: Compact, centered, responsive width */
+  .sign-up-card {
+    width: 90%;
+    max-width: 340px;
+    margin: 60px auto 20px; /* Auto margins for centering, account for navbar */
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #222;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .sign-up-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 8px rgba(255, 255, 255, 0.15);
+  }
+
+  /* Title: Smaller font and icon */
+  .sign-up-title {
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .sign-up-title .login-youtube-img {
+    font-size: 36px !important; /* Slightly smaller YouTube icon */
+  }
+
+  /* Inputs container: Stack vertically, full width */
+  .sign-up-inpts {
+    width: 100%;
+    gap: 10px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Input fields: Full width, compact */
+  .sign-up-inpts-channel {
+    width: 100%;
+    height: 36px;
+    font-size: 13px;
+    padding: 0 10px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  }
+
+  .sign-up-inpts-channel:focus {
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+  }
+
+  .sign-up-inpts-channel::placeholder {
+    font-size: 13px;
+    color: #aaa;
+  }
+
+  /* Image upload section: Compact, centered */
+  .image-upload-sign-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .image-upload-sign-up input[type="file"] {
+    width: 100%;
+    font-size: 12px;
+    padding: 6px;
+    color: #fff;
+  }
+
+  .image-upload-div {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-default-sign-up {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid #444;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .image-default-sign-up:hover {
+    transform: scale(1.05);
+  }
+
+  /* Buttons: Larger, centered, no text overflow */
+  .sign-up-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  .sign-up-btn {
+    width: 100%;
+    max-width: 140px; /* Increased width to fit text */
+    height: 38px; /* Slightly taller for touch-friendliness */
+    padding: 8px 12px;
+    font-size: 13px; /* Smaller font to prevent overflow */
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text is too long */
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .sign-up-btn:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  /* Progress bar: Full width */
+  .MuiBox-root {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .MuiLinearProgress-root {
+    height: 4px;
+    border-radius: 2px;
+  }
+}
+
+/* Additional media query for wider mobile screens (500–768px) */
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+  .sign-up-card {
+    width: 80%;
+    max-width: 400px;
+    padding: 15px;
+  }
+
+  .sign-up-title {
+    font-size: 24px;
+  }
+
+  .sign-up-inpts-channel {
+    height: 38px;
+    font-size: 14px;
+  }
+
+  .sign-up-btn {
+    max-width: 160px; /* Slightly larger for wider screens */
+    height: 40px;
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}

@@ -1,0 +1,253 @@
+.video-upload{
+    padding-top: 56px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+align-items: center;
+
+
+    height: 92vh;
+    font-family: "Oswald",sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+color: white;
+background-color: black;
+}
+.upload-box{
+    width: 45%;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0.5px 0.5px 8px white;
+    padding: 25px;
+
+}
+.upload-video-title{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+
+}
+.upload-form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+    align-items: center;
+
+}
+.upload-form-input{
+    width: 70%;
+    height: 45px;
+    padding: 0px 20px;
+    font-size: 16px;
+    color: white;
+    box-sizing: border-box;
+    background-color: #222;
+    border: none;
+    border-radius: 5px;
+
+}
+.upload-butns{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+.upload-butns-form{
+    padding: 10px 20px;
+    border: 1px solid;
+    font-weight: 500;
+    font-size: 18px;
+border-radius: 5px;
+cursor: pointer;
+color:white;
+
+text-decoration: none;
+&:hover{
+    background-color: white;
+    color: black;
+    
+}
+}
+
+
+
+/* videoupload-mobile.css */
+
+/* Apply styles for screens smaller than 768px (mobile devices) */
+@media only screen and (max-width: 768px) {
+  /* Main container: Full width, centered */
+  .video-upload {
+    padding-top: 48px; /* Below navbar (from mobile.css) */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  /* Upload box: Compact, centered */
+  .upload-box {
+    width: 90%;
+    max-width: 400px; /* Reduced from 45% */
+    border-radius: 12px;
+    margin-top: 15px;
+    box-shadow: 0.3px 0.3px 6px #555;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  /* Title: Smaller, with compact icon */
+  .upload-video-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    gap: 8px;
+  }
+
+  .upload-video-title svg {
+    font-size: 40px !important; /* Override MUI YouTubeIcon size */
+    color: red;
+  }
+
+  /* Form: Compact, centered */
+  .upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduced from 30px */
+    margin-top: 15px;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Inputs: Smaller, touch-friendly */
+  .upload-form-input {
+    width: 90%;
+    height: 38px; /* Reduced from 45px */
+    padding: 0 15px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #222;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  /* File inputs: Compact labels */
+  .upload-form > div {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 90%;
+  }
+
+  .upload-form input[type="file"] {
+    font-size: 13px;
+    color: #fff;
+  }
+
+  /* Loader: Centered, compact */
+  .upload-form .MuiBox-root {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .upload-form .MuiCircularProgress-root {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  /* Buttons: Compact, touch-friendly */
+  .upload-butns {
+    display: flex;
+    flex-direction: column; /* Stack on small screens */
+    gap: 10px; /* Reduced from 30px */
+    justify-content: center;
+    margin-top: 15px;
+    width: 90%;
+  }
+
+  .upload-butns-form {
+    padding: 8px 16px; /* Reduced from 10px 20px */
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 15px; /* Reduced from 18px */
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .upload-butns-form:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  /* Fade when sidebar is open (consistent with homepage, video) */
+  .home-page:not(.full-home-page) .video-upload {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}
+
+/* Additional media query for wider mobile screens (500–768px) */
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+  .upload-box {
+    max-width: 450px;
+    padding: 20px;
+  }
+
+  .upload-video-title {
+    font-size: 24px;
+  }
+
+  .upload-video-title svg {
+    font-size: 44px !important;
+  }
+
+  .upload-form {
+    gap: 18px;
+    margin-top: 20px;
+  }
+
+  .upload-form-input {
+    width: 85%;
+    height: 40px;
+    font-size: 15px;
+    padding: 0 18px;
+  }
+
+  .upload-form > div {
+    font-size: 15px;
+  }
+
+  .upload-form input[type="file"] {
+    font-size: 14px;
+  }
+
+  .upload-butns {
+    flex-direction: row; /* Horizontal for wider screens */
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .upload-butns-form {
+    padding: 9px 18px;
+    font-size: 16px;
+  }
+}

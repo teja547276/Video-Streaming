@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+.navbar {
+  height: 54px;
+  box-sizing: border-box;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  top: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 10;
+}
+
+.navbar-left {
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+}
+/* ===== Mobile Modal Fixes ===== */
+.navbar-modal {
+  position: fixed !important; /* Force fixed positioning */
+  top: 60px !important;      /* Position below navbar */
+  right: 10px !important;
+  width: 160px !important;
+  max-height: 60vh !important; /* Prevent overflow */
+  overflow-y: auto !important; /* Add scroll if needed */
+  z-index: 1000 !important;   /* Ensure it's on top */
+  background-color: rgba(0, 0, 0, 0.95) !important;
+  border: 1px solid #444 !important;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .navbar-modal {
+    top: 50px !important;    /* Adjusted for mobile navbar */
+    right: 8px !important;
+    width: 140px !important;
+    max-height: 50vh !important;
+  }
+  .navbar-modal-option {
+    padding: 12px 16px !important; /* Larger touch targets */
+    font-size: 14px !important;
+  }
+}
+
+.navbar-Ham {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-Ham:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.navbar-youtubeImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-youtubeImage {
+  color: red;
+}
+
+.navbar-title {
+  font-size: 20px;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  font-family: 'Lora', serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.navbar-middle {
+  display: flex;
+  gap: 10px;
+  width: 50%;
+}
+
+.navbar-search {
+  width: 80%;
+  display: flex;
+}
+
+.navbar-Input {
+  width: 100%;
+  height: 40px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid rgb(58, 57, 57);
+  background-color: #121212;
+  color: white;
+  font-size: 16px;
+  padding-left: 30px;
+}
+
+.navbar-Input:focus {
+  outline: none;
+}
+
+.navbar-Input::placeholder {
+  font-size: 16px;
+}
+
+.search-Icon {
+  cursor: pointer;
+  width: 70px;
+  border: 1px solid rgb(42, 42, 42);
+  background-color: rgb(42, 42, 42);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.search-Icon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-right {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.navbar-right-logo {
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.navbar-right-logo:hover {
+  border: 2px solid white;
+}
+
+/* Enhanced modal styles for guaranteed visibility */
+.navbar-modal {
+    position: fixed; /* Use fixed to anchor to viewport */
+    top: 60px; /* Position below navbar (54px height + padding) */
+    right: 10px; /* Align to profile picture */
+    width: 140px; /* Fixed width for consistency */
+    min-width: 100px; /* Minimum for small screens */
+    max-width: 90vw; /* Prevent overflow on narrow screens */
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 100; /* High z-index to stay above all elements */
+    overflow: visible; /* Ensure content isn’t clipped */
+    transform: translateX(0); /* Reset transform */
+}
+
+.navbar-modal-option {
+    padding: 8px 10px;
+    font-size: 13px;
+    color: #ddd;
+    background-color: transparent;
+    border-radius: 4px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.navbar-modal-option:hover {
+    background-color: #2a2a2a;
+}
+
+/* Mobile screens (up to 768px) */
+@media (max-width: 768px) {
+    .navbar-modal {
+        top: 50px; /* Adjust for shorter navbar height (48px) */
+        right: 8px;
+        width: 120px;
+        max-width: 80vw;
+    }
+
+    .navbar-modal-option {
+        padding: 7px 8px;
+        font-size: 12px;
+    }
+}
+
+/* Tablet and stretched mobile screens (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar-modal {
+        top: 55px;
+        right: 12px;
+        width: 130px;
+        max-width: 85vw;
+    }
+
+    .navbar-modal-option {
+        padding: 8px 9px;
+        font-size: 12.5px;
+    }
+}
+
+/* Very narrow screens (below 480px) */
+@media (max-width: 480px) {
+    .navbar-modal {
+        top: 48px;
+        right: 5px;
+        width: 100px;
+        max-width: 75vw;
+    }
+
+    .navbar-modal-option {
+        padding: 6px 7px;
+        font-size: 11px;
+    }
+}
+
+/* Wide screens (above 1024px) */
+@media (min-width: 1025px) {
+    .navbar-modal {
+        top: 62px;
+        right: 15px;
+        width: 150px;
+        max-width: 200px;
+    }
+
+    .navbar-modal-option {
+        padding: 9px 10px;
+        font-size: 14px;
+    }
+}
+.navbar-modal {
+  position: absolute;
+  top: 35px;
+  color: white;
+  width: 100%;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  right: 10px;
+  width: 150px;
+}
+
+.navbar-modal-option {
+  background-color: rgb(85, 85, 85);
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-modal-option:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+
+/* mobile.css */
+
+/* Apply styles for screens smaller than 768px (mobile devices) */
+@media only screen and (max-width: 768px) {
+  /* Navbar: Compact horizontal layout with centered alignment */
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    padding: 6px 8px;
+    gap: 6px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.98);
+    overflow-x: hidden;
+  }
+
+  /* Navbar-left: Tighten spacing for hamburger and logo */
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .navbar-Ham {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .navbar-Ham:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .navbar-youtubeImg {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .navbar-youtubeImage {
+    font-size: 26px !important; /* Smaller Material-UI icon */
+  }
+
+  .navbar-title {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+  }
+
+  /* Navbar-middle: Compact search bar */
+  .navbar-middle {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+  }
+
+  .navbar-search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .navbar-Input {
+    width: 100%;
+    height: 32px;
+    font-size: 13px;
+    padding: 0 12px;
+    border: none;
+    background-color: #1a1a1a;
+    border-radius: 16px 0 0 16px;
+  }
+
+  .navbar-Input::placeholder {
+    font-size: 13px;
+    color: #aaa;
+  }
+
+  .navbar-Input:focus {
+    background-color: #222;
+  }
+
+  .search-Icon {
+    width: 40px;
+    height: 32px;
+    min-width: 40px;
+    background-color: #1a1a1a;
+    border-radius: 0 16px 16px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-Icon svg {
+    font-size: 20px !important; /* Smaller search icon */
+  }
+
+  .search-Icon:hover {
+    background-color: #2a2a2a;
+  }
+
+  /* Navbar-right: Profile and video upload alignment */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .navbar-right-logo {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid #444;
+    transition: border-color 0.2s ease;
+  }
+
+  .navbar-right-logo:hover {
+    border-color: #fff;
+  }
+
+  .navbar-right a {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-right svg {
+    font-size: 24px !important; /* VideoCallIcon */
+    color: #ddd;
+    transition: color 0.2s ease;
+  }
+
+  .navbar-right svg:hover {
+    color: #fff;
+  }
+
+  /* Modal: Compact and aligned to profile */
+  .navbar-modal {
+    position: absolute;
+    top: 34px;
+    right: 8px;
+    width: 110px;
+    max-width: 85%;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    z-index: 20;
+  }
+
+  .navbar-modal-option {
+    padding: 8px 10px;
+    font-size: 13px;
+    color: #ddd;
+    background-color: transparent;
+    border-radius: 4px;
+    text-align: left;
+    transition: background-color 0.2s ease;
+  }
+
+  .navbar-modal-option:hover {
+    background-color: #2a2a2a;
+  }
+}
