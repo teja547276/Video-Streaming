@@ -9,6 +9,12 @@ app.use(cors({
 }))
 app.use(express.json());
 app.use(cookieParser());
+const cors = require("cors");
+
+app.use(cors({
+  origin: "https://video1-streaming.vercel.app"
+}));
+
 
 require('./Connection/Connect');
 
